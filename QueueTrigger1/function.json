@@ -1,0 +1,20 @@
+﻿{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "urls-queue",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "cosmodb",
+      "databaseName": "db-warehouse",
+      "collectionName": "container2",
+      "createIfNotExists": "true",
+      "connectionStringSetting": "AzureCosmosDBConnectionString"
+    }
+  ]
+}
